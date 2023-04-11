@@ -1,0 +1,22 @@
+@import "../SASSVars/Variables.scss";
+
+* {
+	font-family: $mainFont;
+	color: $black;
+	background-color: $ashGray;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $ashGray;
+}
+
+.user-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}

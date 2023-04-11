@@ -1,11 +1,36 @@
-import * as React from "react"
+import * as React from "react";
+import { useParams, Router } from "@reach/router";
+import { ProfileCard } from "../components/ProfileCard/ProfileCard";
+import { Octokit } from "@octokit/core";
+import NotFoundPage from "./404";
 
-const Home = () => {
-  return (
-      <main>
-        <h1>User Profile</h1>
-      </main>
-  );
-}
+const octokit = new Octokit({ auth: process.env.GATSBY_GITHUB_TOKEN });
 
-export default Home
+const Profile = ({ location }) => {
+	const [singleUser, setSingleUser] = React.useState(null);
+
+	React.useEffect(() => {
+		async function getUser() {
+			const response = await octokit.request("GET /users/{username}", {
+				username: location.state.login,
+				headers: {
+					"X-GitHub-Api-Version": "2022-11-28",
+				},
+			});
+			setSingleUser(response.data);
+			console.log(response.data);
+		}
+		getUser();
+	}, []);
+	return (
+		<main>
+			{singleUser ? (
+				<ProfileCard path="/profile/:login" user={singleUser} />
+			) : (
+				<NotFoundPage />
+			)}
+		</main>
+	);
+};
+
+export default Profile;
