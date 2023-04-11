@@ -1,6 +1,6 @@
 @import "../SASSVars/Variables.scss";
 
-* {
+body {
 	font-family: $mainFont;
 	color: $black;
 	background-color: $ashGray;
@@ -17,6 +17,6 @@ main {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(5, 1fr);
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
+	grid-column-gap: 40px;
+	grid-row-gap: 40px;
 }

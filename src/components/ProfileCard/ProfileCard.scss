@@ -1,0 +1,49 @@
+@import "../../SASSVars/Variables.scss";
+
+.profile-card {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+	width: 800px;
+	height: 400px;
+	background-color: $platinum;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	padding: 40px;
+	img {
+		width: 230px;
+		height: 230px;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+	.user-info {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	.repo-info {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	.right-half {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.user-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 200px;
+		height: 300px;
+		background-color: $platinum;
+		padding: 20px;
+	}
+}
