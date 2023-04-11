@@ -26,18 +26,15 @@ const IndexPage = () => {
 
 	console.log(users);
 
-	// const user = users.map((user) => <UserCard key={user.id} user={user} />);
-
 	return (
 		<main>
 			<div className="user-container">
-				{users && users.map((user) => <UserCard key={user.id} user={user} />)}
+				{users ? (
+					users.map((user) => <UserCard key={user.id} user={user} />)
+				) : (
+					<h1>Loading...</h1>
+				)}
 			</div>
-			{/* <Router basepath="/">
-				<Profile path="/profile" users={users}>
-					<ProfileCard path="profile/:login" users={users} />
-				</Profile>
-			</Router> */}
 		</main>
 	);
 };

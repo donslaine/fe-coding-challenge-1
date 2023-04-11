@@ -24,11 +24,7 @@ const Profile = ({ location }) => {
 	}, []);
 	return (
 		<main>
-			{singleUser ? (
-				<ProfileCard path="/profile/:login" user={singleUser} />
-			) : (
-				<NotFoundPage />
-			)}
+			{singleUser ? <ProfileCard user={singleUser} /> : <NotFoundPage />}
 		</main>
 	);
 };

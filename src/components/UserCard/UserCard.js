@@ -1,7 +1,6 @@
 import React from "react";
 import "./UserCard.css";
 import { Link as GatsbyLink } from "gatsby";
-import { useParams } from "@reach/router";
 
 export const UserCard = ({ user }) => {
 	console.log(user);
