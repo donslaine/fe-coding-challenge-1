@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  margin-top: 3rem;
   width: 800px;
   height: 400px;
   background-color: #dae2df;
@@ -21,9 +22,8 @@
 }
 .profile-card .user-info {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: left;
 }
 .profile-card .repo-info {
   display: flex;
@@ -34,10 +34,11 @@
 .profile-card .right-half {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
 }
-.profile-card .user-card {
+.profile-card .profile-user-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,5 +46,34 @@
   width: 200px;
   height: 300px;
   background-color: #dae2df;
-  padding: 20px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.profile-card .profile-user-card .upper {
+  margin-bottom: 10px;
+}
+.profile-card .profile-user-card .lower {
+  margin-top: 10px;
+}
+.profile-card .profile-user-card a {
+  text-decoration: none;
+}
+.profile-card .profile-user-card h2 {
+  margin-bottom: 0;
+}
+.profile-card .profile-user-card p {
+  margin: 2px;
+}
+.profile-card .nums {
+  text-align: center;
+  padding: 0 15px 7px 15px;
+}
+.profile-card .nums h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+  font-weight: lighter;
+}
+.profile-card .nums p {
+  font-size: 1rem;
+  padding-top: 0;
 }/*# sourceMappingURL=ProfileCard.css.map */

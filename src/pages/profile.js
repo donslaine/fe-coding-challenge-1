@@ -2,7 +2,7 @@ import * as React from "react";
 import { useParams, Router } from "@reach/router";
 import { ProfileCard } from "../components/ProfileCard/ProfileCard";
 import { Octokit } from "@octokit/core";
-import NotFoundPage from "./404";
+import { navigate } from "gatsby";
 
 const octokit = new Octokit({ auth: process.env.GATSBY_GITHUB_TOKEN });
 
@@ -17,14 +17,16 @@ const Profile = ({ location }) => {
 					"X-GitHub-Api-Version": "2022-11-28",
 				},
 			});
+			if (response.status === 404) {
+				navigate("/404");
+			}
 			setSingleUser(response.data);
-			console.log(response.data);
 		}
 		getUser();
 	}, []);
 	return (
 		<main>
-			{singleUser ? <ProfileCard user={singleUser} /> : <NotFoundPage />}
+			{singleUser ? <ProfileCard user={singleUser} /> : <h1>Loading...</h1>}
 		</main>
 	);
 };

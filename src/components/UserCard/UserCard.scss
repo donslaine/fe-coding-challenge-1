@@ -18,19 +18,19 @@
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	padding: 20px;
+	button {
+		width: 100px;
+		height: 40px;
+		background-color: $platinum;
+		border: 1px solid $black;
+		border-radius: 10px;
+		font-size: $fontS;
+		font-weight: 500;
+		color: $black;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
 }
-// &:hover
-//     transform: scale(1.1)
-
-//   h3 {
-//     margin: 0;
-//     font-size: 1.5rem;
-//     font-weight: 500;
-//     color: #333;
-//   }
-//   p {
-//     margin: 0;
-//     font-size: 1rem;
-//     font-weight: 400;
-//     color: #666;
-//   }

@@ -6,36 +6,57 @@ export const ProfileCard = ({ user }) => {
 		<div className="profile-card">
 			<div className="profile-user-card">
 				<img className="image" src={user.avatar_url} alt={user.login} />
-				<h2>{user.name}</h2>
-				<p>{user.login}</p>
-				<p>{user.location}</p>
-				<p>{user.blog}</p>
+				<div className="upper">
+					<h2>{user.name}</h2>
+					<p>{user.login}</p>
+				</div>
+				<div className="lower">
+					<p>{user.location}</p>
+					<p>
+						<a href={user.blog}>{user.blog}</a>
+					</p>
+				</div>
 			</div>
 			<div className="right-half">
 				<div className="repo-info">
-					<div>
+					<div className="nums">
 						<h2>{user.public_repos}</h2>
-						<p>Public Repos</p>
+						<p>
+							<strong>Public Repos</strong>
+						</p>
 					</div>
-					<div>
+					<div className="nums">
 						<h2>{user.public_gists}</h2>
-						<p>Public Gists</p>
+						<p>
+							<strong>Public Gists</strong>
+						</p>
 					</div>
-					<div>
+					<div className="nums">
 						<h2>{user.followers}</h2>
-						<p>Followers</p>
+						<p>
+							<strong>Followers</strong>
+						</p>
 					</div>
-					<div>
+					<div className="nums">
 						<h2>{user.following}</h2>
-						<p>Following</p>
+						<p>
+							<strong>Following</strong>
+						</p>
 					</div>
 				</div>
+				<br />
 				<div className="user-info">
 					<p>
-						Biography: <p>{user.bio}</p>
+						<strong>Biography:</strong> {user.bio} {user.bio ? <br /> : null}
 					</p>
-					<p>Company: {user.company}</p>
-					<p>Twitter: {user.twitter_username}</p>
+					<p>
+						<strong>Company:</strong> {user.company}{" "}
+						{user.company ? <br /> : null}
+					</p>
+					<p>
+						<strong>Twitter:</strong> {user.twitter_username ? "@" : null}
+						{user.twitter_username} <br />
+					</p>
 				</div>
 			</div>
 		</div>

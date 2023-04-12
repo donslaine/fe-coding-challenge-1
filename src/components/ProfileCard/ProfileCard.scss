@@ -6,6 +6,7 @@
 	align-items: center;
 	justify-content: space-around;
 	text-align: center;
+	margin-top: 3rem;
 	width: 800px;
 	height: 400px;
 	background-color: $platinum;
@@ -20,9 +21,8 @@
 	}
 	.user-info {
 		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
+		flex-direction: column;
+		justify-content: left;
 	}
 	.repo-info {
 		display: flex;
@@ -33,10 +33,11 @@
 	.right-half {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		align-items: left;
+		justify-content: left;
+		text-align: left;
 	}
-	.user-card {
+	.profile-user-card {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -44,6 +45,35 @@
 		width: 200px;
 		height: 300px;
 		background-color: $platinum;
-		padding: 20px;
+		padding: 10px;
+		margin-top: 10px;
+		.upper {
+			margin-bottom: 10px;
+		}
+		.lower {
+			margin-top: 10px;
+		}
+		a {
+			text-decoration: none;
+		}
+		h2 {
+			margin-bottom: 0;
+		}
+		p {
+			margin: 2px;
+		}
+	}
+	.nums {
+		text-align: center;
+		padding: 0 15px 7px 15px;
+		h2 {
+			font-size: $fontXL;
+			margin-bottom: 0;
+			font-weight: lighter;
+		}
+		p {
+			font-size: $fontS;
+			padding-top: 0;
+		}
 	}
 }

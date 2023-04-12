@@ -18,4 +18,19 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
+}
+.user-card button {
+  width: 100px;
+  height: 40px;
+  background-color: #dae2df;
+  border: 1px solid #353535;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #353535;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.user-card button:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=UserCard.css.map */
